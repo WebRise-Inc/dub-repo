@@ -318,4 +318,14 @@ export const eventsQuerySchema = analyticsQuerySchema
     order: sortOrder
       .describe("DEPRECATED. Use `sortOrder` instead.")
       .openapi({ deprecated: true }),
-  });
+  })
+  .merge(
+    analyticsQuerySchema.pick({
+      domain: true,
+      key: true,
+      interval: true,
+      start: true,
+      end: true,
+      folderId: true,
+    }),
+  );
