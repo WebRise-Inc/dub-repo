@@ -106,13 +106,16 @@ export const partnerProfileAnalyticsQuerySchema = analyticsQuerySchema.pick({
   event: true,
 });
 
-export const partnerProfileEventsQuerySchema = eventsQuerySchema.omit({
-  workspaceId: true,
-  externalId: true,
-  tenantId: true,
-  programId: true,
-  partnerId: true,
-  tagId: true,
-  tagIds: true,
-  folderId: true,
+export const partnerProfileEventsQuerySchema = eventsQuerySchema.pick({
+  linkId: true,
+  domain: true,
+  key: true,
+  interval: true,
+  start: true,
+  end: true,
+  event: true,
+  page: true,
+  limit: true,
+  sortOrder: true,
+  sortBy: true,
 });
