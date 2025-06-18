@@ -327,5 +327,7 @@ export const eventsQuerySchema = analyticsQuerySchema
       start: true,
       end: true,
       folderId: true,
+      linkId: true,
+      externalId: true,
     }),
   );
