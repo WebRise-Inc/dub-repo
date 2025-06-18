@@ -95,15 +95,15 @@ export const PartnerProfileCustomerSchema = CustomerEnrichedSchema.pick({
   activity: customerActivityResponseSchema,
 });
 
-export const partnerProfileAnalyticsQuerySchema = analyticsQuerySchema.omit({
-  workspaceId: true,
-  externalId: true,
-  tenantId: true,
-  programId: true,
-  partnerId: true,
-  tagId: true,
-  tagIds: true,
-  folderId: true,
+export const partnerProfileAnalyticsQuerySchema = analyticsQuerySchema.pick({
+  linkId: true,
+  domain: true,
+  key: true,
+  interval: true,
+  start: true,
+  end: true,
+  groupBy: true,
+  event: true,
 });
 
 export const partnerProfileEventsQuerySchema = eventsQuerySchema.omit({
